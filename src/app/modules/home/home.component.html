@@ -1,0 +1,15 @@
+<app-erro *ngIf="mensagem !== ''"></app-erro>
+<div class="container mt-5" *ngIf="categorias.length > 0">
+  <ul class="cards">
+    <li class="cards_item" *ngFor="let categoria of categorias">
+      <div class="card">
+        <div class="card_image"><img src={{categoria.strCategoryThumb}}></div>
+        <div class="card_content text-center">
+          <h2 class="card_title">{{categoria.strCategory}}</h2>
+          <br>
+          <button class="btn" routerLink='comidas/{{categoria.strCategory}}'>Ver mais</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

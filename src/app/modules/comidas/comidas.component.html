@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <article class="card " *ngFor="let comida of comidas">
+        <img class="card__image" src={{comida.strMealThumb}} />
+        <div class="card__data">
+          <div class="card__info text-center">
+            <h2>{{comida.strMeal}}</h2>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
