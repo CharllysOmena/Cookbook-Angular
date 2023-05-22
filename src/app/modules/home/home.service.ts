@@ -14,7 +14,7 @@ export class HomeService {
   getCategorias(): Observable<Categoria[]> {
     return this.http.get<any>(this.apiURL).pipe(
       map(response => {
-        if (response.categories && response.categories.length > 0) {
+        if (response.categories.length > 0) {
           return response.categories as Categoria[]
         } else {
           return response.categories = [] as Categoria[]
@@ -30,7 +30,7 @@ export class HomeService {
         }
         return throwError('Algo deu errado. Por favor, tente novamente mais tarde.')
       })
-    );
+    )
   }
 
 }
