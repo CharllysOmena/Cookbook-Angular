@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ComidasComponent } from './modules/comidas/comidas.component';
 import { ReceitaComponent } from './modules/receita/receita.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { ErroComponent } from './components/erro/erro.component';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { ErroComponent } from './components/erro/erro.component';
     HomeComponent,
     ComidasComponent,
     ReceitaComponent,
-    NavbarComponent,
     ErroComponent,
   ],
   imports: [

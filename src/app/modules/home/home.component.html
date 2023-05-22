@@ -1,3 +1,14 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/1094/1094675.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Cookbook
+    </a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (input)="recuperaEvento($event)">
+    </form>
+  </div>
+</nav>
 <app-erro *ngIf="mensagem !== ''"></app-erro>
 <div class="container mt-5" *ngIf="categorias.length > 0">
   <ul class="cards">
@@ -7,7 +18,7 @@
         <div class="card_content text-center">
           <h2 class="card_title">{{categoria.strCategory}}</h2>
           <br>
-          <button class="btn" routerLink='comidas/{{categoria.strCategory}}'>Ver mais</button>
+          <button class="btnCard" routerLink='comidas/{{categoria.strCategory}}'>Ver mais</button>
         </div>
       </div>
     </li>

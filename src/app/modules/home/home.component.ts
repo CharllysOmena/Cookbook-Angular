@@ -1,5 +1,5 @@
 import { HomeService } from './home.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/models/Categoria';
 
 @Component({
@@ -9,7 +9,9 @@ import { Categoria } from 'src/app/models/Categoria';
 })
 export class HomeComponent implements OnInit{
   categorias : Categoria[] = []
+  categoriaArmazenadas : Categoria[] = [];
   mensagem : string = ""
+
 
   constructor(private HomeService : HomeService){}
 
@@ -21,10 +23,23 @@ export class HomeComponent implements OnInit{
     this.HomeService.getCategorias().subscribe(
       data => {
         this.categorias = data;
+        this.categoriaArmazenadas = this.categorias
       },
       error => {
         this.mensagem = error.message;
       }
     )
+  }
+
+  recuperaEvento(evento: Event): void{
+    const target = evento.target as HTMLInputElement
+    const value = target.value
+    if(value){
+      this.categorias = this.categorias.filter((categoria) =>
+      categoria.strCategory.toLowerCase().includes(value)
+      )
+    }else{
+      this.categorias = this.categoriaArmazenadas
+    }
   }
 }

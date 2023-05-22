@@ -1,7 +1,18 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/1094/1094675.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Cookbook
+    </a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (input)="recuperaEvento($event)">
+    </form>
+  </div>
+</nav>
 <section class="section">
   <div class="container">
     <div class="grid">
-      <article class="card " *ngFor="let comida of comidas">
+      <article class="card" *ngFor="let comida of comidas">
         <img class="card__image" src={{comida.strMealThumb}} />
         <div class="card__data">
           <div class="card__info text-center">

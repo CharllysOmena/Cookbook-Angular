@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ComidasComponent implements OnInit{
   comidas : Comida[] = []
+  comidasArmazenadas : Comida[] = []
+  value : string = ""
 
   ngOnInit(): void {
     this.listarComidas()
@@ -19,7 +21,25 @@ export class ComidasComponent implements OnInit{
 
   listarComidas(){
     const tipo = String(this.route.snapshot.paramMap.get("tipo"));
-    this.ComidasService.getComidas(tipo).subscribe(data => this.comidas = data)
+    this.ComidasService.getComidas(tipo).subscribe(
+      data => {
+        this.comidas = data
+        this.comidasArmazenadas = this.comidas
+      }
+    )
+  }
+
+  recuperaEvento(evento: Event): void{
+    const target = evento.target as HTMLInputElement
+    const value = target.value
+
+    if(value){
+      this.comidas = this.comidas.filter((categoria) =>
+      categoria.strMeal.toLowerCase().includes(value)
+      )
+    }else{
+      this.comidas = this.comidasArmazenadas
+    }
   }
 
 }
