@@ -9,17 +9,14 @@
     </form>
   </div>
 </nav>
-<section class="section">
-  <div class="container">
-    <div class="grid">
-      <article class="card" *ngFor="let comida of comidas">
-        <img class="card__image" src={{comida.strMealThumb}} />
-        <div class="card__data">
-          <div class="card__info text-center">
-            <h2>{{comida.strMeal}}</h2>
-          </div>
-        </div>
-      </article>
+
+<div class="wrapper">
+  <div class="item" *ngFor="let comida of comidas">
+    <div routerLink='/receita/{{comida.strMeal}}'>
+      <div class="polaroid"><img src={{comida.strMealThumb}}>
+        <div class="caption">{{comida.strMeal}}</div>
+      </div>
     </div>
   </div>
-</section>
+</div>
+

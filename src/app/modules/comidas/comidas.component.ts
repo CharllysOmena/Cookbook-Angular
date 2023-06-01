@@ -20,7 +20,7 @@ export class ComidasComponent implements OnInit{
   constructor(private ComidasService : ComidasService, private route : ActivatedRoute){}
 
   listarComidas(){
-    const tipo = String(this.route.snapshot.paramMap.get("tipo"));
+    const tipo = String(this.route.snapshot.paramMap.get("tipo"))
     this.ComidasService.getComidas(tipo).subscribe(
       data => {
         this.comidas = data
