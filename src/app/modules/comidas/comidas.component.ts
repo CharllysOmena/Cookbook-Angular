@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ComidasComponent implements OnInit{
   comidas : Comida[] = []
   comidasArmazenadas : Comida[] = []
-  value : string = ""
+  mensagem? : string
 
   ngOnInit(): void {
     this.listarComidas()
@@ -25,6 +25,9 @@ export class ComidasComponent implements OnInit{
       data => {
         this.comidas = data
         this.comidasArmazenadas = this.comidas
+      },
+      error => {
+        this.mensagem = error.message
       }
     )
   }
