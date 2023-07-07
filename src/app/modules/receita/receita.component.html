@@ -13,3 +13,65 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="titulo-wrapper mt-5">
+    <h2 class="text-center titulo">
+      <img class="icone" src="https://icon-library.com/images/food-icon-png/food-icon-png-12.jpg" alt="">
+      Ingredientes:
+    </h2>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <ul class="list-group text-center text">
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient1">{{receita.strIngredient1}} - {{receita.strMeasure1}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient3">{{receita.strIngredient3}} - {{receita.strMeasure3}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient5">{{receita.strIngredient5}} - {{receita.strMeasure5}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient7">{{receita.strIngredient7}} - {{receita.strMeasure7}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient9">{{receita.strIngredient9}} - {{receita.strMeasure9}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient11">{{receita.strIngredient11}} - {{receita.strMeasure11}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient13">{{receita.strIngredient13}} - {{receita.strMeasure13}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient15">{{receita.strIngredient15}} - {{receita.strMeasure15}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient17">{{receita.strIngredient17}} - {{receita.strMeasure17}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient19">{{receita.strIngredient19}} - {{receita.strMeasure19}}</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul class="list-group text-center text">
+        <li class="list-group-item list-group-item-action list-group-item-warning"*ngIf="receita.strIngredient2">{{receita.strIngredient2}} - {{receita.strMeasur2}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning"*ngIf="receita.strIngredient4">{{receita.strIngredient4}} - {{receita.strMeasure4}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient6">{{receita.strIngredient6}} - {{receita.strMeasure6}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient8">{{receita.strIngredient8}} - {{receita.strMeasure8}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient10">{{receita.strIngredient10}} - {{receita.strMeasure10}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient12">{{receita.strIngredient12}} - {{receita.strMeasure12}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning"*ngIf="receita.strIngredient14">{{receita.strIngredient14}} - {{receita.strMeasure14}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient16">{{receita.strIngredient16}} - {{receita.strMeasure16}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient18">{{receita.strIngredient18}} - {{receita.strMeasure18}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient20">{{receita.strIngredient20}} - {{receita.strMeasure20}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="titulo-wrapper mt-5">
+    <h2 class="text-center titulo">
+      <img class="icone" src="https://icon-library.com/images/food-icon-png/food-icon-png-12.jpg" alt="">
+      Modo de preparo:
+    </h2>
+  </div>
+  <div class="mt-5">
+    <p class="fs-5 text-justify-css">{{receita.strInstructions}}</p>
+  </div>
+  <div *ngIf="embedLink">
+    <div class="titulo-wrapper mt-5">
+      <h2 class="text-center titulo">
+        <img class="icone" src="https://icon-library.com/images/food-icon-png/food-icon-png-12.jpg" alt="">
+        Video explicativo:
+      </h2>
+    </div>
+    <div class="mt-5 text-center">
+      <div class="mt-5">
+        <iframe [src]="embed" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
