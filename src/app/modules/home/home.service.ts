@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { Categoria } from 'src/app/models/Categoria';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-  apiURL = "https://www.themealdb.com/api/json/v1/1/categories.php"
+  apiURL = environment.API_URL + "categories.php"
 
   constructor(private http : HttpClient){}
 

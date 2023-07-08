@@ -37,11 +37,11 @@ export class ComidasComponent implements OnInit{
     const value = target.value
 
     if(value){
-      this.comidas = this.comidas.filter((categoria) =>
+      this.comidas = this.comidasArmazenadas.filter((categoria) =>
       categoria.strMeal.toLowerCase().includes(value)
       )
     }else{
-      this.comidas = this.comidasArmazenadas
+      this.comidas = [...this.comidasArmazenadas]
     }
   }
 

@@ -37,7 +37,7 @@
     </div>
     <div class="col-md-6">
       <ul class="list-group text-center text">
-        <li class="list-group-item list-group-item-action list-group-item-warning"*ngIf="receita.strIngredient2">{{receita.strIngredient2}} - {{receita.strMeasur2}}</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning"*ngIf="receita.strIngredient2">{{receita.strIngredient2}} - {{receita.strMeasure2}}</li>
         <li class="list-group-item list-group-item-action list-group-item-warning"*ngIf="receita.strIngredient4">{{receita.strIngredient4}} - {{receita.strMeasure4}}</li>
         <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient6">{{receita.strIngredient6}} - {{receita.strMeasure6}}</li>
         <li class="list-group-item list-group-item-action list-group-item-warning" *ngIf="receita.strIngredient8">{{receita.strIngredient8}} - {{receita.strMeasure8}}</li>
@@ -56,21 +56,8 @@
       Modo de preparo:
     </h2>
   </div>
-  <div class="mt-5">
+  <div class="mt-5 mb-5">
     <p class="fs-5 text-justify-css">{{receita.strInstructions}}</p>
-  </div>
-  <div *ngIf="embedLink">
-    <div class="titulo-wrapper mt-5">
-      <h2 class="text-center titulo">
-        <img class="icone" src="https://icon-library.com/images/food-icon-png/food-icon-png-12.jpg" alt="">
-        Video explicativo:
-      </h2>
-    </div>
-    <div class="mt-5 text-center">
-      <div class="mt-5">
-        <iframe [src]="embed" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
   </div>
 </div>
 

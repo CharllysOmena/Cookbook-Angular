@@ -31,15 +31,16 @@ export class HomeComponent implements OnInit{
     )
   }
 
-  recuperaEvento(evento: Event): void{
+  recuperaEvento(evento: Event): void {
     const target = evento.target as HTMLInputElement
     const value = target.value
-    if(value){
-      this.categorias = this.categorias.filter((categoria) =>
+
+    if (value) {
+    this.categorias = this.categoriaArmazenadas.filter((categoria) =>
       categoria.strCategory.toLowerCase().includes(value)
-      )
-    }else{
-      this.categorias = this.categoriaArmazenadas
+    )
+    } else {
+    this.categorias = [...this.categoriaArmazenadas]
     }
   }
 }

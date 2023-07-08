@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { Receita } from 'src/app/models/Receita';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ReceitaService {
 
   constructor(private http : HttpClient) { }
 
-  apiURL = "https://www.themealdb.com/api/json/v1/1/search.php?s="
+  apiURL = environment.API_URL + "search.php?s="
 
   getReceita(nome:string) : Observable<any>{
     return this.http.get(this.apiURL + nome).pipe(
