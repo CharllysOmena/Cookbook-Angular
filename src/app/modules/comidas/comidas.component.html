@@ -9,12 +9,13 @@
     </form>
   </div>
 </nav>
-
-<div class="wrapper">
-  <div class="item" *ngFor="let comida of comidas">
-    <div routerLink='/receita/{{comida.strMeal}}'>
-      <div class="polaroid"><img src={{comida.strMealThumb}}>
-        <div class="caption">{{comida.strMeal}}</div>
+<div class="container">
+  <div class="wrapper">
+    <div class="item" *ngFor="let comida of comidas">
+      <div routerLink='/receita/{{comida.strMeal}}'>
+        <div class="polaroid"><img src={{comida.strMealThumb}}>
+          <div class="caption">{{comida.strMeal}}</div>
+        </div>
       </div>
     </div>
   </div>
