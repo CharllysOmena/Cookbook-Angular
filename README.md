@@ -49,9 +49,9 @@ docker compose up
 
 # Tecnologias
 
-Esse projeto foi desenvolvido em Angular 2+, Typescript e TailwindCss, além de usar o eslint para auxílio.
+Esse projeto foi desenvolvido em Angular, Typescript e Bootstrap.
 
-- `Angular2+`
+- `Angular`
 - `Typescript`
 - `Bootstrap`
 
