@@ -1,19 +1,59 @@
 # Você chegou ao livro de receitas
 Esse projeto foi desenvolvido utilizando angular com o intuito de demonstrar o consumo de API, criação de layouts e utilização do docker.
 
-## Principais tecnologias usadas
+<p>&nbsp</p>
 
-* [TypeScript](https://www.typescriptlang.org/)
-* [Angular](https://angular.io/)
-* [Docker](https://www.docker.com/)
-* [Bootstrap5](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+# Sumário
 
-## Como rodar o projeto localmente
+- [Instruções](#instruções)
+- [Tecnologias](#tecnologias)
+- [Fotos do projeto](#executando-o-projeto)
 
--> SEM DOCKER
-* Baixe o Node v19.8.1 na sua maquina
-* Execute o comando "npm install" para baixar as dependencias do projeto
-* Execute o comando "ng serve" para executar o projeto
+<p>&nbsp</p>
 
--> COM DOCKER
-* Execute o comando "docker compose up"
+# Instruções:
+
+Inicie clonando o repositorio para sua máquina local
+
+```
+git clone https://github.com/CharllysOmena/angular-cookbook.git
+```
+
+Entre na pasta do repositorio que você acabou de clonar
+
+```
+cd angular-cookbook
+```
+
+## Sem docker
+
+Logo em seguida, instale as dependencias
+
+```
+npm install
+```
+
+Apos isso, Para iniciar o projeto rode o comando
+
+```
+npm start
+```
+## Com docker
+
+Logo em seguida, instale as dependencias
+
+```
+docker compose up
+```
+
+<p>&nbsp</p>
+
+# Tecnologias
+
+Esse projeto foi desenvolvido em Angular 2+, Typescript e TailwindCss, além de usar o eslint para auxílio.
+
+- `Angular2+`
+- `Typescript`
+- `Bootstrap`
+
+
