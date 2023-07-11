@@ -39,7 +39,7 @@ npm start
 ```
 ## Com docker
 
-Logo em seguida, instale as dependencias
+Em seu terminal rode o seguinte comando
 
 ```
 docker compose up
