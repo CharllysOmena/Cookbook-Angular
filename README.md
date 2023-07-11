@@ -44,6 +44,11 @@ Em seu terminal rode o seguinte comando
 ```
 docker compose up
 ```
+No seu browser acesse
+
+```
+http://localhost:8080/
+```
 
 <p>&nbsp</p>
 
