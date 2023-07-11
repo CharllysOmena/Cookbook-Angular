@@ -2,15 +2,12 @@
 Esse projeto foi desenvolvido utilizando angular com o intuito de demonstrar o consumo de API, criação de layouts e utilização do docker.
 
 <p>&nbsp</p>
-
 # Sumário
 
 - [Instruções](#instruções)
 - [Tecnologias](#tecnologias)
-- [Fotos do projeto](#executando-o-projeto)
 
 <p>&nbsp</p>
-
 # Instruções:
 
 Inicie clonando o repositorio para sua máquina local
